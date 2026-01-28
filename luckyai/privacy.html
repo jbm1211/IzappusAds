@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="2026손금운세 앱 개인정보 처리방침">
-    <title>개인정보 처리방침 - 2026손금운세</title>
+    <meta name="description" content="2026손금운세 앱 개인정보 처리방침 / Privacy Policy for 2026 Palm Reading Fortune App">
+    <title>개인정보 처리방침 / Privacy Policy - 2026손금운세</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Inter:wght@300;400;500;700&display=swap"
         rel="stylesheet">
     <style>
         * {
@@ -24,6 +25,10 @@
             background: #f5f5f5;
         }
 
+        body.lang-en {
+            font-family: 'Inter', sans-serif;
+        }
+
         .container {
             max-width: 900px;
             margin: 0 auto;
@@ -36,6 +41,32 @@
             border-bottom: 3px solid #8b5cf6;
             padding-bottom: 20px;
             margin-bottom: 40px;
+            position: relative;
+        }
+
+        .lang-toggle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+        }
+
+        .lang-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+        }
+
+        .lang-toggle:active {
+            transform: translateY(0);
         }
 
         h1 {
@@ -122,6 +153,23 @@
             text-decoration: underline;
         }
 
+        /* Language toggle */
+        .lang-ko {
+            display: block;
+        }
+
+        .lang-en {
+            display: none;
+        }
+
+        body.lang-en .lang-ko {
+            display: none;
+        }
+
+        body.lang-en .lang-en {
+            display: block;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 20px 15px;
@@ -129,10 +177,16 @@
 
             h1 {
                 font-size: 1.5rem;
+                padding-right: 100px;
             }
 
             h2 {
                 font-size: 1.3rem;
+            }
+
+            .lang-toggle {
+                font-size: 0.8rem;
+                padding: 8px 15px;
             }
         }
     </style>
@@ -141,232 +195,496 @@
 <body>
     <div class="container">
         <header>
-            <h1>개인정보 처리방침</h1>
-            <p class="last-updated">최종 수정일: 2026년 1월 28일</p>
+            <button class="lang-toggle" onclick="toggleLanguage()">
+                <span class="lang-ko">🌐 English</span>
+                <span class="lang-en">🌐 한국어</span>
+            </button>
+
+            <h1>
+                <span class="lang-ko">개인정보 처리방침</span>
+                <span class="lang-en">Privacy Policy</span>
+            </h1>
+            <p class="last-updated">
+                <span class="lang-ko">최종 수정일: 2026년 1월 28일</span>
+                <span class="lang-en">Last Updated: January 28, 2026</span>
+            </p>
         </header>
 
-        <section>
-            <p><strong>2026손금운세</strong>(이하 "본 앱")는 사용자의 개인정보를 소중히 여기며, 「개인정보 보호법」, 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」 및 유럽연합
-                일반 데이터 보호 규정(GDPR)을 준수합니다.</p>
+        <!-- 한국어 버전 -->
+        <div class="lang-ko">
+            <section>
+                <p><strong>2026손금운세</strong>(이하 "본 앱")는 사용자의 개인정보를 소중히 여기며, 「개인정보 보호법」, 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」 및
+                    유럽연합 일반 데이터 보호 규정(GDPR)을 준수합니다.</p>
 
-            <p>본 개인정보 처리방침은 본 앱이 수집하는 개인정보의 항목, 수집 및 이용 목적, 보유 및 이용 기간, 파기 절차 및 방법 등에 관한 사항을 안내합니다.</p>
-        </section>
+                <p>본 개인정보 처리방침은 본 앱이 수집하는 개인정보의 항목, 수집 및 이용 목적, 보유 및 이용 기간, 파기 절차 및 방법 등에 관한 사항을 안내합니다.</p>
+            </section>
 
-        <section>
-            <h2>1. 수집하는 개인정보 항목</h2>
+            <section>
+                <h2>1. 수집하는 개인정보 항목</h2>
 
-            <h3>1.1 사용자가 직접 제공하는 정보</h3>
-            <ul>
-                <li><strong>생년월일</strong>: 사주 운세 분석을 위해 수집</li>
-                <li><strong>손금 사진</strong>: 손금 운세 분석을 위해 촬영한 이미지</li>
-            </ul>
+                <h3>1.1 사용자가 직접 제공하는 정보</h3>
+                <ul>
+                    <li><strong>생년월일</strong>: 사주 운세 분석을 위해 수집</li>
+                    <li><strong>손금 사진</strong>: 손금 운세 분석을 위해 촬영한 이미지</li>
+                </ul>
 
-            <h3>1.2 자동으로 수집되는 정보</h3>
-            <ul>
-                <li><strong>기기 정보</strong>: 기기 모델, 운영체제 버전</li>
-                <li><strong>앱 사용 정보</strong>: 앱 실행 시간, 기능 사용 내역</li>
-                <li><strong>광고 식별자</strong>: Google 광고 ID (AdMob 광고 제공을 위해)</li>
-            </ul>
+                <h3>1.2 자동으로 수집되는 정보</h3>
+                <ul>
+                    <li><strong>기기 정보</strong>: 기기 모델, 운영체제 버전</li>
+                    <li><strong>앱 사용 정보</strong>: 앱 실행 시간, 기능 사용 내역</li>
+                    <li><strong>광고 식별자</strong>: Google 광고 ID (AdMob 광고 제공을 위해)</li>
+                </ul>
 
-            <div class="highlight">
-                <strong>⚠️ 중요:</strong> 본 앱은 사용자의 이름, 이메일, 전화번호, 주소 등의 개인 식별 정보를 수집하지 않습니다.
-            </div>
-        </section>
+                <div class="highlight">
+                    <strong>⚠️ 중요:</strong> 본 앱은 사용자의 이름, 이메일, 전화번호, 주소 등의 개인 식별 정보를 수집하지 않습니다.
+                </div>
+            </section>
 
-        <section>
-            <h2>2. 개인정보의 수집 및 이용 목적</h2>
+            <section>
+                <h2>2. 개인정보의 수집 및 이용 목적</h2>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>수집 항목</th>
-                        <th>이용 목적</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>생년월일</td>
-                        <td>사주 운세 분석 및 제공</td>
-                    </tr>
-                    <tr>
-                        <td>손금 사진</td>
-                        <td>AI 기반 손금 운세 분석</td>
-                    </tr>
-                    <tr>
-                        <td>기기 정보</td>
-                        <td>앱 최적화 및 오류 분석</td>
-                    </tr>
-                    <tr>
-                        <td>광고 식별자</td>
-                        <td>맞춤형 광고 제공 (AdMob)</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>수집 항목</th>
+                            <th>이용 목적</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>생년월일</td>
+                            <td>사주 운세 분석 및 제공</td>
+                        </tr>
+                        <tr>
+                            <td>손금 사진</td>
+                            <td>AI 기반 손금 운세 분석</td>
+                        </tr>
+                        <tr>
+                            <td>기기 정보</td>
+                            <td>앱 최적화 및 오류 분석</td>
+                        </tr>
+                        <tr>
+                            <td>광고 식별자</td>
+                            <td>맞춤형 광고 제공 (AdMob)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-        <section>
-            <h2>3. 개인정보의 보유 및 이용 기간</h2>
+            <section>
+                <h2>3. 개인정보의 보유 및 이용 기간</h2>
 
-            <h3>3.1 생년월일</h3>
-            <ul>
-                <li><strong>저장 위치</strong>: 사용자 기기 내부 저장소에만 저장</li>
-                <li><strong>보유 기간</strong>: 앱 삭제 시까지</li>
-                <li><strong>외부 전송</strong>: 서버로 전송되지 않음</li>
-            </ul>
+                <h3>3.1 생년월일</h3>
+                <ul>
+                    <li><strong>저장 위치</strong>: 사용자 기기 내부 저장소에만 저장</li>
+                    <li><strong>보유 기간</strong>: 앱 삭제 시까지</li>
+                    <li><strong>외부 전송</strong>: 서버로 전송되지 않음</li>
+                </ul>
 
-            <h3>3.2 손금 사진</h3>
-            <ul>
-                <li><strong>처리 방식</strong>: Gemini AI API로 전송하여 분석</li>
-                <li><strong>보유 기간</strong>: 분석 완료 후 즉시 삭제</li>
-                <li><strong>서버 저장</strong>: 서버에 저장되지 않음</li>
-            </ul>
+                <h3>3.2 손금 사진</h3>
+                <ul>
+                    <li><strong>처리 방식</strong>: Gemini AI API로 전송하여 분석</li>
+                    <li><strong>보유 기간</strong>: 분석 완료 후 즉시 삭제</li>
+                    <li><strong>서버 저장</strong>: 서버에 저장되지 않음</li>
+                </ul>
 
-            <div class="highlight">
-                <strong>✅ 개인정보 보호:</strong> 촬영된 손금 사진은 AI 분석을 위해 일시적으로 Google Gemini API로 전송되며, 분석이 완료되면 즉시 삭제됩니다. 어떠한
-                서버에도 저장되지 않습니다.
-            </div>
+                <div class="highlight">
+                    <strong>✅ 개인정보 보호:</strong> 촬영된 손금 사진은 AI 분석을 위해 일시적으로 Google Gemini API로 전송되며, 분석이 완료되면 즉시 삭제됩니다.
+                    어떠한 서버에도 저장되지 않습니다.
+                </div>
 
-            <h3>3.3 광고 관련 정보</h3>
-            <ul>
-                <li><strong>수집 주체</strong>: Google AdMob</li>
-                <li><strong>보유 기간</strong>: Google의 개인정보 처리방침에 따름</li>
-            </ul>
-        </section>
+                <h3>3.3 광고 관련 정보</h3>
+                <ul>
+                    <li><strong>수집 주체</strong>: Google AdMob</li>
+                    <li><strong>보유 기간</strong>: Google의 개인정보 처리방침에 따름</li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>4. 개인정보의 제3자 제공</h2>
+            <section>
+                <h2>4. 개인정보의 제3자 제공</h2>
 
-            <p>본 앱은 사용자의 개인정보를 제3자에게 제공하지 않습니다. 단, 다음의 경우 예외로 합니다:</p>
+                <p>본 앱은 사용자의 개인정보를 제3자에게 제공하지 않습니다. 단, 다음의 경우 예외로 합니다:</p>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>제공받는 자</th>
-                        <th>제공 목적</th>
-                        <th>제공 항목</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Google LLC (Gemini AI)</td>
-                        <td>손금 운세 분석</td>
-                        <td>손금 사진, 생년월일</td>
-                    </tr>
-                    <tr>
-                        <td>Google LLC (AdMob)</td>
-                        <td>광고 제공</td>
-                        <td>광고 식별자, 기기 정보</td>
-                    </tr>
-                </tbody>
-            </table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>제공받는 자</th>
+                            <th>제공 목적</th>
+                            <th>제공 항목</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Google LLC (Gemini AI)</td>
+                            <td>손금 운세 분석</td>
+                            <td>손금 사진, 생년월일</td>
+                        </tr>
+                        <tr>
+                            <td>Google LLC (AdMob)</td>
+                            <td>광고 제공</td>
+                            <td>광고 식별자, 기기 정보</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-            <p>관련 개인정보 처리방침:</p>
-            <ul>
-                <li>Google 개인정보 처리방침: <a href="https://policies.google.com/privacy"
-                        target="_blank">https://policies.google.com/privacy</a></li>
-                <li>AdMob 개인정보 보호: <a href="https://support.google.com/admob/answer/6128543"
-                        target="_blank">https://support.google.com/admob/answer/6128543</a></li>
-            </ul>
-        </section>
+                <p>관련 개인정보 처리방침:</p>
+                <ul>
+                    <li>Google 개인정보 처리방침: <a href="https://policies.google.com/privacy"
+                            target="_blank">https://policies.google.com/privacy</a></li>
+                    <li>AdMob 개인정보 보호: <a href="https://support.google.com/admob/answer/6128543"
+                            target="_blank">https://support.google.com/admob/answer/6128543</a></li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>5. 개인정보의 파기 절차 및 방법</h2>
+            <section>
+                <h2>5. 개인정보의 파기 절차 및 방법</h2>
 
-            <h3>5.1 파기 절차</h3>
-            <p>수집된 개인정보는 목적 달성 후 즉시 파기됩니다.</p>
+                <h3>5.1 파기 절차</h3>
+                <p>수집된 개인정보는 목적 달성 후 즉시 파기됩니다.</p>
 
-            <h3>5.2 파기 방법</h3>
-            <ul>
-                <li><strong>전자적 파일</strong>: 복구 불가능한 방법으로 영구 삭제</li>
-                <li><strong>기기 내 저장 정보</strong>: 앱 삭제 시 자동 삭제</li>
-            </ul>
-        </section>
+                <h3>5.2 파기 방법</h3>
+                <ul>
+                    <li><strong>전자적 파일</strong>: 복구 불가능한 방법으로 영구 삭제</li>
+                    <li><strong>기기 내 저장 정보</strong>: 앱 삭제 시 자동 삭제</li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>6. 사용자의 권리</h2>
+            <section>
+                <h2>6. 사용자의 권리</h2>
 
-            <p>사용자는 언제든지 다음의 권리를 행사할 수 있습니다:</p>
+                <p>사용자는 언제든지 다음의 권리를 행사할 수 있습니다:</p>
 
-            <ul>
-                <li><strong>열람 권리</strong>: 기기 내 저장된 생년월일 정보 확인</li>
-                <li><strong>삭제 권리</strong>: 앱 삭제를 통한 모든 정보 삭제</li>
-                <li><strong>광고 맞춤 설정</strong>: 기기 설정에서 광고 추적 제한 가능</li>
-            </ul>
+                <ul>
+                    <li><strong>열람 권리</strong>: 기기 내 저장된 생년월일 정보 확인</li>
+                    <li><strong>삭제 권리</strong>: 앱 삭제를 통한 모든 정보 삭제</li>
+                    <li><strong>광고 맞춤 설정</strong>: 기기 설정에서 광고 추적 제한 가능</li>
+                </ul>
 
-            <h3>광고 맞춤 설정 방법</h3>
-            <ul>
-                <li><strong>Android</strong>: 설정 → Google → 광고 → 광고 맞춤설정 선택 해제</li>
-            </ul>
-        </section>
+                <h3>광고 맞춤 설정 방법</h3>
+                <ul>
+                    <li><strong>Android</strong>: 설정 → Google → 광고 → 광고 맞춤설정 선택 해제</li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>7. 개인정보 보호를 위한 기술적·관리적 조치</h2>
+            <section>
+                <h2>7. 개인정보 보호를 위한 기술적·관리적 조치</h2>
 
-            <h3>7.1 기술적 조치</h3>
-            <ul>
-                <li>HTTPS를 통한 암호화 통신</li>
-                <li>로컬 저장소 암호화</li>
-                <li>API 통신 시 SSL/TLS 암호화</li>
-            </ul>
+                <h3>7.1 기술적 조치</h3>
+                <ul>
+                    <li>HTTPS를 통한 암호화 통신</li>
+                    <li>로컬 저장소 암호화</li>
+                    <li>API 통신 시 SSL/TLS 암호화</li>
+                </ul>
 
-            <h3>7.2 관리적 조치</h3>
-            <ul>
-                <li>최소한의 개인정보만 수집</li>
-                <li>서버에 개인정보 미저장 원칙</li>
-                <li>정기적인 보안 점검</li>
-            </ul>
-        </section>
+                <h3>7.2 관리적 조치</h3>
+                <ul>
+                    <li>최소한의 개인정보만 수집</li>
+                    <li>서버에 개인정보 미저장 원칙</li>
+                    <li>정기적인 보안 점검</li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>8. 아동의 개인정보 보호</h2>
+            <section>
+                <h2>8. 아동의 개인정보 보호</h2>
 
-            <p>본 앱은 만 14세 미만 아동의 개인정보를 고의로 수집하지 않습니다. 만 14세 미만 아동이 본 앱을 사용할 경우, 법정대리인의 동의가 필요합니다.</p>
-        </section>
+                <p>본 앱은 만 14세 미만 아동의 개인정보를 고의로 수집하지 않습니다. 만 14세 미만 아동이 본 앱을 사용할 경우, 법정대리인의 동의가 필요합니다.</p>
+            </section>
 
-        <section>
-            <h2>9. 개인정보 처리방침의 변경</h2>
+            <section>
+                <h2>9. 개인정보 처리방침의 변경</h2>
 
-            <p>본 개인정보 처리방침은 법령, 정책 또는 보안기술의 변경에 따라 내용이 추가, 삭제 및 수정될 수 있으며, 변경 시 앱 내 공지사항 또는 웹사이트를 통해 고지합니다.</p>
-        </section>
+                <p>본 개인정보 처리방침은 법령, 정책 또는 보안기술의 변경에 따라 내용이 추가, 삭제 및 수정될 수 있으며, 변경 시 앱 내 공지사항 또는 웹사이트를 통해 고지합니다.</p>
+            </section>
 
-        <section>
-            <h2>10. 유럽연합(EU) 사용자를 위한 GDPR 안내</h2>
+            <section>
+                <h2>10. 유럽연합(EU) 사용자를 위한 GDPR 안내</h2>
 
-            <h3>10.1 데이터 처리의 법적 근거</h3>
-            <ul>
-                <li><strong>계약 이행</strong>: 운세 서비스 제공을 위한 필수 정보 처리</li>
-                <li><strong>동의</strong>: 광고 맞춤 설정 등</li>
-            </ul>
+                <h3>10.1 데이터 처리의 법적 근거</h3>
+                <ul>
+                    <li><strong>계약 이행</strong>: 운세 서비스 제공을 위한 필수 정보 처리</li>
+                    <li><strong>동의</strong>: 광고 맞춤 설정 등</li>
+                </ul>
 
-            <h3>10.2 EU 사용자의 권리</h3>
-            <ul>
-                <li>개인정보 접근 권리</li>
-                <li>개인정보 수정 권리</li>
-                <li>개인정보 삭제 권리 (Right to be forgotten)</li>
-                <li>데이터 이동권</li>
-                <li>처리 제한 권리</li>
-            </ul>
-        </section>
+                <h3>10.2 EU 사용자의 권리</h3>
+                <ul>
+                    <li>개인정보 접근 권리</li>
+                    <li>개인정보 수정 권리</li>
+                    <li>개인정보 삭제 권리 (Right to be forgotten)</li>
+                    <li>데이터 이동권</li>
+                    <li>처리 제한 권리</li>
+                </ul>
+            </section>
 
-        <section class="contact-info">
-            <h2>11. 개인정보 보호 책임자 및 문의</h2>
+            <section class="contact-info">
+                <h2>11. 개인정보 보호 책임자 및 문의</h2>
 
-            <p>개인정보 처리에 관한 문의사항이 있으시면 아래로 연락 주시기 바랍니다:</p>
+                <p>개인정보 처리에 관한 문의사항이 있으시면 아래로 연락 주시기 바랍니다:</p>
 
-            <ul>
-                <li><strong>앱 이름</strong>: 2026손금운세</li>
-                <li><strong>개발자</strong>: bmwork</li>
-                <li><strong>문의 방법</strong>: 앱 내 '문의하기' 기능 이용</li>
-                <li><strong>웹사이트</strong>: <a
-                        href="https://jbm1211.github.io/luckyai">https://jbm1211.github.io/luckyai</a></li>
-            </ul>
-        </section>
+                <ul>
+                    <li><strong>앱 이름</strong>: 2026손금운세</li>
+                    <li><strong>개발자</strong>: bmwork</li>
+                    <li><strong>문의 방법</strong>: 앱 내 '문의하기' 기능 이용</li>
+                    <li><strong>웹사이트</strong>: <a
+                            href="https://jbm1211.github.io/luckyai">https://jbm1211.github.io/luckyai</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- English Version -->
+        <div class="lang-en">
+            <section>
+                <p><strong>2026 Palm Reading Fortune</strong> (hereinafter referred to as "the App") values your
+                    personal information and complies with the Personal Information Protection Act, the Act on Promotion
+                    of Information and Communications Network Utilization and Information Protection, and the European
+                    Union General Data Protection Regulation (GDPR).</p>
+
+                <p>This Privacy Policy explains the items of personal information collected by the App, the purpose of
+                    collection and use, retention and use period, and destruction procedures and methods.</p>
+            </section>
+
+            <section>
+                <h2>1. Personal Information Collected</h2>
+
+                <h3>1.1 Information Provided Directly by Users</h3>
+                <ul>
+                    <li><strong>Date of Birth</strong>: Collected for fortune-telling analysis</li>
+                    <li><strong>Palm Photos</strong>: Images captured for palm reading analysis</li>
+                </ul>
+
+                <h3>1.2 Automatically Collected Information</h3>
+                <ul>
+                    <li><strong>Device Information</strong>: Device model, operating system version</li>
+                    <li><strong>App Usage Information</strong>: App launch time, feature usage history</li>
+                    <li><strong>Advertising Identifier</strong>: Google Advertising ID (for AdMob advertising)</li>
+                </ul>
+
+                <div class="highlight">
+                    <strong>⚠️ Important:</strong> The App does not collect personally identifiable information such as
+                    name, email, phone number, or address.
+                </div>
+            </section>
+
+            <section>
+                <h2>2. Purpose of Collection and Use</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Collected Item</th>
+                            <th>Purpose of Use</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Date of Birth</td>
+                            <td>Fortune-telling analysis and service provision</td>
+                        </tr>
+                        <tr>
+                            <td>Palm Photos</td>
+                            <td>AI-based palm reading analysis</td>
+                        </tr>
+                        <tr>
+                            <td>Device Information</td>
+                            <td>App optimization and error analysis</td>
+                        </tr>
+                        <tr>
+                            <td>Advertising Identifier</td>
+                            <td>Personalized advertising (AdMob)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>3. Retention and Use Period</h2>
+
+                <h3>3.1 Date of Birth</h3>
+                <ul>
+                    <li><strong>Storage Location</strong>: Stored only in the user's device internal storage</li>
+                    <li><strong>Retention Period</strong>: Until app deletion</li>
+                    <li><strong>External Transfer</strong>: Not transmitted to servers</li>
+                </ul>
+
+                <h3>3.2 Palm Photos</h3>
+                <ul>
+                    <li><strong>Processing Method</strong>: Sent to Gemini AI API for analysis</li>
+                    <li><strong>Retention Period</strong>: Immediately deleted after analysis</li>
+                    <li><strong>Server Storage</strong>: Not stored on any server</li>
+                </ul>
+
+                <div class="highlight">
+                    <strong>✅ Privacy Protection:</strong> Captured palm photos are temporarily sent to Google Gemini
+                    API for AI analysis and are immediately deleted upon completion. They are not stored on any server.
+                </div>
+
+                <h3>3.3 Advertising Information</h3>
+                <ul>
+                    <li><strong>Collector</strong>: Google AdMob</li>
+                    <li><strong>Retention Period</strong>: According to Google's Privacy Policy</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Third-Party Provision</h2>
+
+                <p>The App does not provide personal information to third parties, except in the following cases:</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Recipient</th>
+                            <th>Purpose</th>
+                            <th>Items Provided</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Google LLC (Gemini AI)</td>
+                            <td>Palm reading analysis</td>
+                            <td>Palm photos, date of birth</td>
+                        </tr>
+                        <tr>
+                            <td>Google LLC (AdMob)</td>
+                            <td>Advertising provision</td>
+                            <td>Advertising identifier, device information</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>Related Privacy Policies:</p>
+                <ul>
+                    <li>Google Privacy Policy: <a href="https://policies.google.com/privacy"
+                            target="_blank">https://policies.google.com/privacy</a></li>
+                    <li>AdMob Privacy: <a href="https://support.google.com/admob/answer/6128543"
+                            target="_blank">https://support.google.com/admob/answer/6128543</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. Destruction Procedures and Methods</h2>
+
+                <h3>5.1 Destruction Procedure</h3>
+                <p>Collected personal information is immediately destroyed after achieving its purpose.</p>
+
+                <h3>5.2 Destruction Method</h3>
+                <ul>
+                    <li><strong>Electronic Files</strong>: Permanently deleted in an unrecoverable manner</li>
+                    <li><strong>Device-Stored Information</strong>: Automatically deleted upon app deletion</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>6. User Rights</h2>
+
+                <p>Users can exercise the following rights at any time:</p>
+
+                <ul>
+                    <li><strong>Right to Access</strong>: View date of birth information stored on the device</li>
+                    <li><strong>Right to Delete</strong>: Delete all information by uninstalling the app</li>
+                    <li><strong>Ad Personalization Settings</strong>: Limit ad tracking in device settings</li>
+                </ul>
+
+                <h3>Ad Personalization Settings</h3>
+                <ul>
+                    <li><strong>Android</strong>: Settings → Google → Ads → Opt out of Ads Personalization</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>7. Technical and Administrative Measures</h2>
+
+                <h3>7.1 Technical Measures</h3>
+                <ul>
+                    <li>Encrypted communication via HTTPS</li>
+                    <li>Local storage encryption</li>
+                    <li>SSL/TLS encryption for API communication</li>
+                </ul>
+
+                <h3>7.2 Administrative Measures</h3>
+                <ul>
+                    <li>Collect only minimal personal information</li>
+                    <li>Principle of not storing personal information on servers</li>
+                    <li>Regular security inspections</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>8. Children's Privacy Protection</h2>
+
+                <p>The App does not knowingly collect personal information from children under 14 years of age. If a
+                    child under 14 uses the App, parental consent is required.</p>
+            </section>
+
+            <section>
+                <h2>9. Changes to Privacy Policy</h2>
+
+                <p>This Privacy Policy may be added, deleted, or modified according to changes in laws, policies, or
+                    security technologies. Changes will be notified through in-app notifications or the website.</p>
+            </section>
+
+            <section>
+                <h2>10. GDPR Notice for EU Users</h2>
+
+                <h3>10.1 Legal Basis for Data Processing</h3>
+                <ul>
+                    <li><strong>Contract Performance</strong>: Processing necessary information for fortune-telling
+                        service provision</li>
+                    <li><strong>Consent</strong>: Ad personalization settings, etc.</li>
+                </ul>
+
+                <h3>10.2 Rights of EU Users</h3>
+                <ul>
+                    <li>Right to access personal information</li>
+                    <li>Right to rectify personal information</li>
+                    <li>Right to erasure (Right to be forgotten)</li>
+                    <li>Right to data portability</li>
+                    <li>Right to restriction of processing</li>
+                </ul>
+            </section>
+
+            <section class="contact-info">
+                <h2>11. Privacy Officer and Contact</h2>
+
+                <p>If you have any questions about personal information processing, please contact us:</p>
+
+                <ul>
+                    <li><strong>App Name</strong>: 2026 Palm Reading Fortune</li>
+                    <li><strong>Developer</strong>: bmwork</li>
+                    <li><strong>Contact Method</strong>: Use the 'Contact Us' feature in the app</li>
+                    <li><strong>Website</strong>: <a
+                            href="https://jbm1211.github.io/luckyai">https://jbm1211.github.io/luckyai</a></li>
+                </ul>
+            </section>
+        </div>
 
         <footer
             style="margin-top: 60px; padding-top: 20px; border-top: 1px solid #e5e7eb; text-align: center; color: #999;">
-            <p>&copy; 2026 2026손금운세. All rights reserved.</p>
+            <p>&copy; 2026 2026손금운세 / 2026 Palm Reading Fortune. All rights reserved.</p>
         </footer>
     </div>
+
+    <script>
+        function toggleLanguage() {
+            const body = document.body;
+            const currentLang = body.classList.contains('lang-en') ? 'en' : 'ko';
+
+            if (currentLang === 'ko') {
+                body.classList.add('lang-en');
+                localStorage.setItem('preferredLanguage', 'en');
+            } else {
+                body.classList.remove('lang-en');
+                localStorage.setItem('preferredLanguage', 'ko');
+            }
+        }
+
+        // Load saved language preference
+        window.addEventListener('DOMContentLoaded', function () {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang === 'en') {
+                document.body.classList.add('lang-en');
+            }
+        });
+    </script>
 </body>
 
 </html>
